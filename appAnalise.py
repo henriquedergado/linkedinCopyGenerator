@@ -17,7 +17,7 @@ headers = {
 
 # Adicionar a imagem no cabeçalho
 image_url = "https://analise.com/img/logo.png"
-st.image(image_url, use_column_width=True)
+st.image(image_url, use_container_width=True)
 
 # Adicionar o nome do aplicativo
 st.subheader("Copy Generator - Análise Editorial")
