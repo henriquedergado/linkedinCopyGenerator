@@ -26,7 +26,8 @@ copy_template = PromptTemplate(
     Atue como um analista de social media especializado em linkedin, Escreva uma copy para um post no linkedin sobre o artigo... {article}
     
     <regras>
-     - Sempre coloque uma CTA para a matéria completa com o link da matéria.
+     - O texto deve ter no máximo 1500 caracteres
+     - Sempre coloque uma CTA para a matéria completa com o endereço do link da matéria escrito.
      - Termine o texto sempre provocando o leitor a interagir nos comentários com base em sua opinião.
      - Utilize sempre as hashtags #AnaliseEditorial #Direito #Juridico, adicione outras de acordo com o tema do artigo para que melhore o alcance do post.
     <regras>
