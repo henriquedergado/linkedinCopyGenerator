@@ -15,9 +15,13 @@ headers = {
     'Authorization': 'Bearer ' + st.secrets["jina_api_key"] 
 }
 
-# Configurando o título da aplicação no Streamlit
-st.title('🦜🔗 Copy Generator')
-link = st.text_input('Digite o link da matéria...') # Campo de entrada para o usuário escrever o tema
+# Adicionar a imagem no cabeçalho
+image_url = "https://analise.com/img/logo.png"
+st.image(image_url, use_column_width=True)
+
+# Adicionar o nome do aplicativo
+st.subheader("Copy Generator - Análise Editorial")
+link = st.text_input('🔗 Digite o link da matéria...') # Campo de entrada para o usuário escrever o tema
 
 # Definindo templates de prompt para o título do vídeo e o roteiro
 copy_template = PromptTemplate(
