@@ -48,10 +48,18 @@ if link:
 
     # Configurando a cadeia de LLM para gerar títulos
     copy_chain = LLMChain(llm=llm, prompt=copy_template, verbose=True, output_key='copy')
+    st.write('Acessando o link para ler a matéria...')
     article = requests.get('https://r.jina.ai/'+link, headers=headers)
+    st.write('Já temos todas as informações :)')
+    st.write('Aguarde um instante enquanto nossa IA gera a sua copy ;)') # Exibe o título gerado
     copy = copy_chain.run(article=article.text) # Gera a copy
 
     # Inicializando o wrapper da API Serper.dev
     #google_search = SerperAPIWrapper(api_key=st.secrets["serper_api_key"])
 
-    st.write(copy) # Exibe o título gerado
+    
+    
+    with st.expander('Copy'):
+        st.info(copy)
+
+    
