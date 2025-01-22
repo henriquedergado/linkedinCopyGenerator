@@ -29,8 +29,9 @@ copy_template = PromptTemplate(
     template = """
     Atue como um analista de social media especializado em linkedin, Escreva uma copy para um post no linkedin sobre o artigo... {article}
     
+    Siga todas as regras abaixo
     <regras>
-     - O texto deve ter no máximo 1500 caracteres
+     - O texto deve ter no máximo 500 caracteres
      - Sempre coloque uma CTA para a matéria completa com o endereço do link da matéria escrito, por exemplo: https:://.
      - Não utilize tags HTML
      - Termine o texto sempre provocando o leitor a interagir nos comentários com base em sua opinião.
